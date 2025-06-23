@@ -14,7 +14,7 @@ This project demonstrates the design and creation of a relational database schem
 Stores customer personal details such as name, email, and address.
 
 ### 2. Categories
-Stores product categories (e.g., Electronics, Fashion).
+Stores product categories (e.g., Electronics, Fashion,Home Applications..etc).
 
 ### 3. Products
 Stores product information including price, stock, and category.
