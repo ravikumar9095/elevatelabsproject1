@@ -1,62 +1,75 @@
-# 🛠️ SQL Developer Internship - Task 2: Data Insertion and Null Handling
+📌 Objective
 
-## 📌 Objective
-
-This task involves practicing core DML operations (INSERT, UPDATE, DELETE) while handling NULL values and default constraints in a MySQL database.
+This task focuses on practicing `SELECT` queries in MySQL to retrieve and filter data from the `e_commerce_system` database. It demonstrates how to extract meaningful insights using filters, sorting, aliases, and basic grouping.
 
 ---
 
-## 🧾 Summary of Operations
+🧾 SQL Queries Included
 
-- Inserted new customers, categories, products, orders, and order items
-- Used NULL for missing addresses
-- Applied DEFAULT values by omitting columns
-- Updated product prices, customer addresses, and stock levels
-- Deleted specific customers and products
-- Queried NULL values using `IS NULL`
-- Inserted data into specific columns only
+🟢 Basic Retrieval & Filtering
+```sql
+SELECT * FROM Products;
+SELECT product_name, price FROM Products;
+SELECT * FROM Customers WHERE address LIKE '%India%' AND name LIKE 'R%';
+SELECT * FROM Products WHERE price BETWEEN 500 AND 20000;
+SELECT * FROM Orders ORDER BY total_amount DESC;
+SELECT * FROM Orders ORDER BY order_date DESC LIMIT 3;
+````
 
----
+🔵 Advanced Filtering & Querying
 
-## 📂 Files Included
+```sql
+SELECT DISTINCT category_id FROM Products;
+SELECT product_name AS Item, price AS Cost FROM Products;
+SELECT * FROM Customers WHERE customer_id IN (1, 3, 5);
+SELECT * FROM Customers WHERE customer_id NOT IN (2, 4);
+SELECT * FROM Customers WHERE address IS NULL;
+SELECT * FROM Customers WHERE address IS NOT NULL;
+SELECT * FROM Orders ORDER BY order_date DESC LIMIT 5 OFFSET 3;
+```
 
-| File Name         | Description                                      |
-|------------------|--------------------------------------------------|
-| `task2_final.sql` | SQL script with INSERT, UPDATE, DELETE, SELECT queries |
+🟣 Grouping and Aggregation
 
----
+```sql
+SELECT customer_id, COUNT(*) AS order_count
+FROM Orders
+GROUP BY customer_id
+HAVING COUNT(*) > 1;
 
-## 🧠 Key Concepts Practiced
 
-- `INSERT INTO ... VALUES (...)`
-- `UPDATE ... SET ... WHERE ...`
-- `DELETE FROM ... WHERE ...`
-- Handling `NULL` and `DEFAULT`
-- `IS NULL` usage
-- Partial insert (specific columns only)
-- Use of constraints like `AUTO_INCREMENT`, `NOT NULL`, `UNIQUE`
-- `FOREIGN KEY` behavior and ON DELETE logic
 
----
 
-## 🛠 Tools Used
+🧠 Key SQL Concepts Practiced
 
-- MySQL Workbench
-- e_commerce_system database schema (Task 1)
-- GitHub for version control
+* `SELECT *`, `SELECT column1, column2`
+* `WHERE`, `AND`, `OR`
+* `LIKE`, `IN`, `NOT IN`, `BETWEEN`
+* `IS NULL`, `IS NOT NULL`
+* `ORDER BY`, `DESC`, `ASC`
+* `LIMIT`, `OFFSET`
+* `DISTINCT` values
+* Aliasing using `AS`
+* `GROUP BY`, `HAVING`
 
----
 
-## 🔗 Submission
 
-Submit your GitHub repository containing this task using the link below:
+📂 Files Included
 
-[Google Form Submission Link](https://forms.gle/8Gm83s53KbyXs3Ne9)
+| File Name   | Description                              |
+| ----------- | ---------------------------------------- |
+| `task3.sql` | SQL script containing all SELECT queries |
+| `README.md` | Project documentation (this file)        |
 
----
 
-## 👨‍💻 Author
+🛠 Tools Used
 
-**Ravi Kumar Chittiboyina**  
-B.Tech 3rd Year, Sri Krishnadevaraya University  
-Email: chittiboyinaravikumaryadav555@gmail.com
+* MySQL Workbench
+* GitHub
+* `e_commerce_system` database from Task 1
+
+
+👨‍💻 Author
+
+Ravi Kumar Chittiboyina
+B.Tech 3rd Year — Sri Krishnadevaraya University
+📧 Email: [chittiboyinaravikumaryadav555@gmail.com](mailto:chittiboyinaravikumaryadav555@gmail.com)
