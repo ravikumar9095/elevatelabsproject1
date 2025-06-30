@@ -1,63 +1,51 @@
-# 📊 SQL Developer Internship - Task 4: Aggregate Functions and Grouping
+# 🔗 SQL Developer Internship - Task 5: SQL Joins
 
 ## 📌 Objective
 
-This task demonstrates the use of SQL aggregate functions and grouping operations to summarize and analyze tabular data from the `e_commerce_system` database.
+This task demonstrates how to merge and analyze data across multiple tables using SQL JOIN operations. It includes all major join types including INNER, LEFT, RIGHT, FULL OUTER, CROSS, and SELF joins.
 
 ---
 
-## 🧾 SQL Queries Performed
+🔍 Joins Covered
 
-1. Total number of orders placed by each customer  
-2. Total quantity sold for each product  
-3. Average order amount per customer  
-4. Total revenue generated per product  
-5. Number of products available in each category  
-6. Customers who placed more than one order (using HAVING)  
-7. Highest and lowest priced products in each category  
-8. Average price of all products  
-9. Total number of orders  
-10. Count of distinct product categories
+1. INNER JOIN: Retrieve matching records from both tables  
+2. LEFT JOIN: Retrieve all records from the left table, with matches from the right  
+3. RIGHT JOIN: Retrieve all records from the right table, with matches from the left  
+4. FULL OUTER JOIN: Combines results of LEFT and RIGHT JOIN  
+5. JOIN Multiple Tables: Orders + Products + Customers  
+6. CROSS JOIN: Cartesian product of customers and products  
+7. SELF JOIN: Comparing customers to other customers  
+8. NATURAL JOIN: Simulated where column names are identical
 
 ---
 
-## 🧠 Key SQL Concepts Practiced
+🧠 Key SQL Concepts Practiced
 
-- `COUNT(*)`, `COUNT(column)`
-- `SUM()`, `AVG()`, `MAX()`, `MIN()`
-- `ROUND()` to format averages
-- `GROUP BY` for summarizing data
-- `HAVING` to filter grouped results
-- `DISTINCT` inside aggregate functions
-- Combining multiple aggregates in one query
+- `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL OUTER JOIN`
+- `JOIN`ing multiple tables
+- `CROSS JOIN`, `SELF JOIN`, `NATURAL JOIN`
+- `UNION` for simulating FULL OUTER JOIN
+- Understanding relationships through keys
 
 ---
 
-## 📂 Files Included
+📂 Files Included
 
-| File Name     | Description                               |
-|---------------|-------------------------------------------|
-| `task4.sql`   | SQL script with all aggregate queries     |
-| `README.md`   | This documentation file                   |
+| File Name     | Description                            |
+|---------------|----------------------------------------|
+| `task5.sql`   | SQL script with all join query types   |
+| `README.md`   | Project documentation for Task 5       |
 
 ---
 
-## 🛠 Tools Used
+🛠 Tools Used
 
 - MySQL Workbench
+- e_commerce_system database (from Task 1)
 - GitHub
-- e_commerce_system database schema
 
----
+👨‍💻 Author
 
-## 🔗 Submission Link
-
-[Submit your GitHub repository here](https://forms.gle/8Gm83s53KbyXs3Ne9)
-
----
-
-## 👨‍💻 Author
-
-**Ravi Kumar Chittiboyina**  
+Ravi Kumar Chittiboyina
 B.Tech 3rd Year — Sri Krishnadevaraya University  
 📧 Email: chittiboyinaravikumaryadav555@gmail.com
