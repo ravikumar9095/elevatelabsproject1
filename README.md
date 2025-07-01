@@ -1,51 +1,53 @@
-# 🔗 SQL Developer Internship - Task 5: SQL Joins
+🧠 SQL Developer Internship - Task 6: Subqueries and Nested Queries
 
-## 📌 Objective
+📌 Objective
 
-This task demonstrates how to merge and analyze data across multiple tables using SQL JOIN operations. It includes all major join types including INNER, LEFT, RIGHT, FULL OUTER, CROSS, and SELF joins.
+This task demonstrates how to use scalar, correlated, and nested subqueries in various parts of SQL statements including SELECT, WHERE, and FROM clauses.
 
 ---
 
-🔍 Joins Covered
+🔍 Subqueries Covered
 
-1. INNER JOIN: Retrieve matching records from both tables  
-2. LEFT JOIN: Retrieve all records from the left table, with matches from the right  
-3. RIGHT JOIN: Retrieve all records from the right table, with matches from the left  
-4. FULL OUTER JOIN: Combines results of LEFT and RIGHT JOIN  
-5. JOIN Multiple Tables: Orders + Products + Customers  
-6. CROSS JOIN: Cartesian product of customers and products  
-7. SELF JOIN: Comparing customers to other customers  
-8. NATURAL JOIN: Simulated where column names are identical
+1. Scalar Subquery in `WHERE`
+2. Correlated Subquery
+3. Subquery in `SELECT`
+4. Derived Table in `FROM`
+5. `EXISTS` and `NOT EXISTS`
+6. `IN`, `ALL` Subqueries
+7. Multi-Level Nested Subqueries
+8. Filtering and Aggregation with Subqueries
 
 ---
 
 🧠 Key SQL Concepts Practiced
 
-- `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL OUTER JOIN`
-- `JOIN`ing multiple tables
-- `CROSS JOIN`, `SELF JOIN`, `NATURAL JOIN`
-- `UNION` for simulating FULL OUTER JOIN
-- Understanding relationships through keys
+- Subqueries returning single values (scalar)
+- Correlated subqueries (depending on outer query)
+- `EXISTS`, `NOT EXISTS`
+- `IN` and `ALL` operators with subqueries
+- Derived tables using `FROM (...) AS alias`
+- Using aggregation functions inside subqueries
+- Nesting multiple subqueries
 
 ---
 
 📂 Files Included
 
-| File Name     | Description                            |
-|---------------|----------------------------------------|
-| `task5.sql`   | SQL script with all join query types   |
-| `README.md`   | Project documentation for Task 5       |
+| File Name     | Description                                      |
+|---------------|--------------------------------------------------|
+| `task6.sql`   | SQL queries demonstrating subqueries and nesting |
+| `README.md`   | Documentation explaining the logic and output    |
 
 ---
 
 🛠 Tools Used
 
 - MySQL Workbench
-- e_commerce_system database (from Task 1)
 - GitHub
+- e_commerce_system database
 
 👨‍💻 Author
 
-Ravi Kumar Chittiboyina
+**Ravi Kumar Chittiboyina**  
 B.Tech 3rd Year — Sri Krishnadevaraya University  
 📧 Email: chittiboyinaravikumaryadav555@gmail.com
