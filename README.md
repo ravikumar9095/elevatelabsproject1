@@ -1,53 +1,52 @@
-🧠 SQL Developer Internship - Task 6: Subqueries and Nested Queries
+# 🧾 SQL Developer Internship - Task 7: Creating Views
 
 📌 Objective
 
-This task demonstrates how to use scalar, correlated, and nested subqueries in various parts of SQL statements including SELECT, WHERE, and FROM clauses.
+This task focuses on creating and using SQL views to abstract, summarize, and control data access in the `e_commerce_system` database.
 
 ---
 
-🔍 Subqueries Covered
+🧠 Views Created
 
-1. Scalar Subquery in `WHERE`
-2. Correlated Subquery
-3. Subquery in `SELECT`
-4. Derived Table in `FROM`
-5. `EXISTS` and `NOT EXISTS`
-6. `IN`, `ALL` Subqueries
-7. Multi-Level Nested Subqueries
-8. Filtering and Aggregation with Subqueries
+1. customer_order_summary
+   Summary of total orders and total spending per customer.
+
+2. top_selling_products  
+   Shows which products were sold most by quantity.
+
+3. high_value_orders  
+   Filters orders with amount greater than ₹10,000.
+
+4. order_details_view 
+   Detailed view combining orders, customers, products, and items.
+
+5. limited_orders_view WITH CHECK OPTION
+   Prevents updates that violate `total_amount < 20000`.
 
 ---
 
-🧠 Key SQL Concepts Practiced
+🛠 Key SQL Concepts Practiced
 
-- Subqueries returning single values (scalar)
-- Correlated subqueries (depending on outer query)
-- `EXISTS`, `NOT EXISTS`
-- `IN` and `ALL` operators with subqueries
-- Derived tables using `FROM (...) AS alias`
-- Using aggregation functions inside subqueries
-- Nesting multiple subqueries
+- `CREATE VIEW` with `SELECT` queries
+- Using `JOIN` and `GROUP BY` in views
+- Filtering data inside views (`WHERE`)
+- Data security using `WITH CHECK OPTION`
+- Reusability and abstraction via view definitions
 
 ---
 
 📂 Files Included
 
-| File Name     | Description                                      |
-|---------------|--------------------------------------------------|
-| `task6.sql`   | SQL queries demonstrating subqueries and nesting |
-| `README.md`   | Documentation explaining the logic and output    |
+| File Name     | Description                          |
+|---------------|--------------------------------------|
+| `task7.sql`   | SQL script with view creation        |
+| `README.md`   | Project documentation for Task 7     |
 
 ---
 
-🛠 Tools Used
-
-- MySQL Workbench
-- GitHub
-- e_commerce_system database
 
 👨‍💻 Author
 
-**Ravi Kumar Chittiboyina**  
+Ravi Kumar Chittiboyina 
 B.Tech 3rd Year — Sri Krishnadevaraya University  
 📧 Email: chittiboyinaravikumaryadav555@gmail.com
