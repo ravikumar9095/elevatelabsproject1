@@ -1,52 +1,71 @@
-# 🧾 SQL Developer Internship - Task 7: Creating Views
-
 📌 Objective
 
-This task focuses on creating and using SQL views to abstract, summarize, and control data access in the `e_commerce_system` database.
+This task demonstrates how to modularize and reuse SQL logic using **stored procedures** and **user-defined functions** in the `e_commerce_system` database.
 
 ---
 
-🧠 Views Created
+✅ What Was Created
 
-1. customer_order_summary
-   Summary of total orders and total spending per customer.
+🧾 Stored Procedures
 
-2. top_selling_products  
-   Shows which products were sold most by quantity.
+1. `GetOrdersByCustomer(cust_id)`  
+   → Returns order details for a specific customer.
 
-3. high_value_orders  
-   Filters orders with amount greater than ₹10,000.
+2. `AddCustomer(name, email, address)`  
+   → Inserts a new customer into the database.
 
-4. order_details_view 
-   Detailed view combining orders, customers, products, and items.
+3. `GetOrderDetails(order_id)`  
+   → Returns all item details for a specific order.
 
-5. limited_orders_view WITH CHECK OPTION
-   Prevents updates that violate `total_amount < 20000`.
+4. `CheckProductStock(product_id)`  
+   → Returns stock quantity of a product.
 
 ---
 
-🛠 Key SQL Concepts Practiced
+📐 SQL Functions
 
-- `CREATE VIEW` with `SELECT` queries
-- Using `JOIN` and `GROUP BY` in views
-- Filtering data inside views (`WHERE`)
-- Data security using `WITH CHECK OPTION`
-- Reusability and abstraction via view definitions
+1. `TotalSpentByCustomer(cust_id)`  
+   → Returns total amount spent by a customer.
+
+2. `OrderCountByCustomer(cust_id)`  
+   → Returns number of orders placed by a customer.
+
+3. `MaxProductPrice()`  
+   → Returns the highest product price in inventory.
+
+4. `TotalItemsInOrder(order_id)`  
+   → Returns total quantity of items in a specific order.
+
+---
+
+🧠 Key Concepts Practiced
+
+- `CREATE PROCEDURE` with `IN` parameters  
+- `CREATE FUNCTION` returning scalar values  
+- `COALESCE()` to avoid NULL results  
+- Using `DELIMITER` to wrap procedures and functions  
+- Modular, reusable SQL design  
 
 ---
 
 📂 Files Included
 
-| File Name     | Description                          |
-|---------------|--------------------------------------|
-| `task7.sql`   | SQL script with view creation        |
-| `README.md`   | Project documentation for Task 7     |
+| File Name           | Description                                 |
+|---------------------|---------------------------------------------|
+| `task8_extended.sql`| Complete procedures and functions SQL file  |
+| `README.md`         | This documentation file                     |
 
 ---
+
+🛠 Tools Used
+
+- MySQL Workbench  
+- GitHub  
+- `e_commerce_system` database schema
 
 
 👨‍💻 Author
 
-Ravi Kumar Chittiboyina 
+**Ravi Kumar Chittiboyina**  
 B.Tech 3rd Year — Sri Krishnadevaraya University  
 📧 Email: chittiboyinaravikumaryadav555@gmail.com
